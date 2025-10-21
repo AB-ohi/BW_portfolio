@@ -1,5 +1,5 @@
-'use client';
-import React, { useState, useEffect, useRef } from 'react';
+"use client";
+import React, { useState, useEffect, useRef } from "react";
 
 const Skills = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -7,16 +7,66 @@ const Skills = () => {
   const sectionRef = useRef(null);
 
   const skills = [
-    { name: 'HTML', percentage: 90, color: 'from-orange-500 to-red-500', icon: '🌐' },
-    { name: 'CSS', percentage: 80, color: 'from-blue-500 to-cyan-500', icon: '🎨' },
-    { name: 'JavaScript', percentage: 60, color: 'from-yellow-500 to-orange-500', icon: '⚡' },
-    { name: 'React', percentage: 70, color: 'from-cyan-500 to-blue-500', icon: '⚛️' },
-    { name: 'Express.js', percentage: 70, color: 'from-gray-500 to-gray-700', icon: '🚀' },
-    { name: 'Node.js', percentage: 50, color: 'from-green-500 to-emerald-500', icon: '📗' },
-    { name: 'MongoDB', percentage: 90, color: 'from-green-600 to-green-800', icon: '🍃' },
-    { name: 'Firebase', percentage: 80, color: 'from-yellow-500 to-orange-600', icon: '🔥' },
-    { name: 'Figma', percentage: 80, color: 'from-purple-500 to-pink-500', icon: '🎭' },
-    { name: 'Next.js', percentage: 80, color: 'from-black to-gray-700', icon: '▲' },
+    {
+      name: "HTML",
+      percentage: 90,
+      color: "from-orange-500 to-red-500",
+      icon: "🌐",
+    },
+    {
+      name: "CSS",
+      percentage: 80,
+      color: "from-blue-500 to-cyan-500",
+      icon: "🎨",
+    },
+    {
+      name: "JavaScript",
+      percentage: 60,
+      color: "from-yellow-500 to-orange-500",
+      icon: "⚡",
+    },
+    {
+      name: "React",
+      percentage: 70,
+      color: "from-cyan-500 to-blue-500",
+      icon: "⚛️",
+    },
+    {
+      name: "Express.js",
+      percentage: 70,
+      color: "from-gray-500 to-gray-700",
+      icon: "🚀",
+    },
+    {
+      name: "Node.js",
+      percentage: 50,
+      color: "from-green-500 to-emerald-500",
+      icon: "📗",
+    },
+    {
+      name: "MongoDB",
+      percentage: 90,
+      color: "from-green-600 to-green-800",
+      icon: "🍃",
+    },
+    {
+      name: "Firebase",
+      percentage: 80,
+      color: "from-yellow-500 to-orange-600",
+      icon: "🔥",
+    },
+    {
+      name: "Figma",
+      percentage: 80,
+      color: "from-purple-500 to-pink-500",
+      icon: "🎭",
+    },
+    {
+      name: "Next.js",
+      percentage: 80,
+      color: "from-black to-gray-700",
+      icon: "▲",
+    },
   ];
 
   useEffect(() => {
@@ -47,19 +97,21 @@ const Skills = () => {
   }, [isMounted]);
 
   return (
-    <section 
+    <section
       ref={sectionRef}
       className="min-h-screen flex items-center justify-center py-20 px-8 overflow-hidden"
     >
       <div className="max-w-7xl w-full">
-        
         {/* Section Header */}
         <div className="text-center mb-16">
           <p className="text-purple-400 text-lg font-semibold uppercase tracking-wider mb-2">
             What I Offer
           </p>
           <h2 className="text-5xl font-bold text-white mb-4">
-            My <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">Skills</span>
+            My{" "}
+            <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
+              Skills
+            </span>
           </h2>
           <p className="text-gray-400 text-lg max-w-2xl mx-auto">
             Expertise in modern web technologies and tools
@@ -73,22 +125,26 @@ const Skills = () => {
               key={index}
               className={`
                 group relative transition-all duration-700 ease-out
-                ${isMounted && isVisible 
-                  ? 'translate-y-0 opacity-100' 
-                  : 'translate-y-20 opacity-0'
+                ${
+                  isMounted && isVisible
+                    ? "translate-y-0 opacity-100"
+                    : "translate-y-20 opacity-0"
                 }
               `}
-              style={{ 
+              style={{
                 transitionDelay: `${index * 100}ms`,
-                animation: isMounted && isVisible ? `float ${3 + (index % 3)}s ease-in-out infinite` : 'none',
-                animationDelay: `${index * 0.2}s`
+                animation:
+                  isMounted && isVisible
+                    ? `float ${3 + (index % 3)}s ease-in-out infinite`
+                    : "none",
+                animationDelay: `${index * 0.2}s`,
               }}
             >
               {/* Skill Card */}
               <div className="relative flex flex-col items-center">
-                
                 {/* Icon Circle */}
-                <div className={`
+                <div
+                  className={`
                   w-32 h-32 rounded-full bg-gradient-to-br ${skill.color} 
                   flex items-center justify-center text-5xl
                   shadow-lg shadow-purple-500/30
@@ -97,17 +153,18 @@ const Skills = () => {
                   group-hover:shadow-2xl group-hover:shadow-purple-500/50
                   border-4 border-white/10
                   relative overflow-hidden
-                `}>
+                `}
+                >
                   {/* Background Animation */}
                   <div className="absolute inset-0 bg-white/0 group-hover:bg-white/10 transition-all duration-500"></div>
-                  
+
                   {/* Icon */}
                   <span className="relative z-10 filter drop-shadow-lg group-hover:opacity-0 transition-all">
                     {skill.icon}
                   </span>
 
                   {/* Percentage Badge - Show on Hover */}
-                  <div className="absolute inset-0 bg-black/90 rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300 backdrop-blur-sm">
+                  <div className="absolute inset-0 bg-black/90 rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 rotate-[347deg] transition-all  backdrop-blur-sm">
                     <span className="text-2xl font-bold text-white">
                       {skill.percentage}%
                     </span>
@@ -121,21 +178,24 @@ const Skills = () => {
 
                 {/* Progress Bar */}
                 <div className="w-full mt-3 h-2 bg-gray-700/50 rounded-full overflow-hidden">
-                  <div 
+                  <div
                     className={`h-full bg-gradient-to-r ${skill.color} rounded-full transition-all duration-1000 ease-out`}
-                    style={{ 
-                      width: isMounted && isVisible ? `${skill.percentage}%` : '0%',
-                      transitionDelay: `${index * 100 + 300}ms`
+                    style={{
+                      width:
+                        isMounted && isVisible ? `${skill.percentage}%` : "0%",
+                      transitionDelay: `${index * 100 + 300}ms`,
                     }}
                   ></div>
                 </div>
 
                 {/* Floating Glow Effect */}
-                <div className={`
+                <div
+                  className={`
                   absolute -inset-4 bg-gradient-to-r ${skill.color} 
                   rounded-full blur-2xl opacity-0 group-hover:opacity-20 
                   transition-opacity duration-500 -z-10
-                `}></div>
+                `}
+                ></div>
               </div>
             </div>
           ))}
@@ -152,7 +212,8 @@ const Skills = () => {
       {/* CSS Animation for Floating Effect */}
       <style jsx>{`
         @keyframes float {
-          0%, 100% {
+          0%,
+          100% {
             transform: translateY(0px);
           }
           50% {

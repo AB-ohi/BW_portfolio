@@ -1,22 +1,21 @@
-'use client'
-import React, { useState } from 'react';
-import { Link } from 'react-scroll';
-import { Home, User, Wrench, Briefcase } from 'lucide-react';
+"use client";
+import React, { useState } from "react";
+import { Link } from "react-scroll";
+import { Home, User, Wrench, Briefcase } from "lucide-react";
 
 const Navbar = () => {
-  const [activeItem, setActiveItem] = useState('Home');
+  const [activeItem, setActiveItem] = useState("Home");
 
   const navItems = [
-    { name: 'Home', icon: Home, to: 'home' },
-    { name: 'About Me', icon: User, to: 'about' },
-    { name: 'My Skill', icon: Wrench, to: 'skill' },
-    { name: 'My Project', icon: Briefcase, to: 'project' }
+    { name: "Home", icon: Home, to: "home" },
+    { name: "About Me", icon: User, to: "about" },
+    { name: "My Skill", icon: Wrench, to: "skill" },
+    { name: "My Project", icon: Briefcase, to: "project" },
   ];
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 from-slate-900 via-purple-900/95 to-slate-900 backdrop-blur-lg border-b border-purple-500/30 shadow-lg shadow-purple-500/20">
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-gradient-to-r from-slate-900 via-purple-900/95 to-slate-900 backdrop-blur-lg border-b border-purple-500/30 shadow-lg shadow-purple-500/20">
       <div className="w-11/12 max-w-7xl mx-auto flex justify-between items-center">
-
         {/* Logo */}
         <div className="group cursor-pointer">
           <div className="relative">
@@ -46,28 +45,42 @@ const Navbar = () => {
                   spy={true}
                   className="relative h-12 w-28 flex items-center justify-center overflow-hidden"
                 >
-                  {/* Text */}
+                  {/* Text - Hide on hover or if active */}
                   <span
-                    className={`absolute text-base font-semibold transition-all duration-500 ease-out
-                    ${isActive ? 'text-cyan-400' : 'text-purple-300'}
-                    group-hover:translate-y-[-150%] group-hover:opacity-0`}
+                    className={`
+                      absolute text-base font-semibold transition-all duration-500 ease-out text-purple-300
+                     
+                      ${isActive ? "translate-y-[-150%] opacity-0" : "translate-y-0 opacity-100"}
+                      group-hover:translate-y-[-150%] group-hover:opacity-0
+                    `}
                   >
                     {item.name}
                   </span>
 
-                  {/* Icon */}
+                  {/* Icon - Show on hover or if active */}
                   <div
-                    className={`absolute translate-y-[150%] opacity-0 
-                    transition-all duration-500 ease-out
-                    group-hover:translate-y-0 group-hover:opacity-100`}
+                    className={`
+                      absolute transition-all duration-500 ease-out
+                      ${isActive ? "translate-y-0 opacity-100" : "translate-y-[150%] opacity-0"}
+                      group-hover:translate-y-0 group-hover:opacity-100
+                    `}
                   >
                     <Icon
-                      className={`w-7 h-7 ${isActive ? 'text-cyan-400' : 'text-blue-400'}`}
+                      className={`w-7 h-7 ${
+                        isActive ? "text-cyan-400" : "text-blue-400"
+                      }`}
                     />
                   </div>
 
-                  {/* Background Glow */}
-                  <div className="absolute inset-0 bg-gradient-to-r from-purple-600 to-blue-600 rounded-lg opacity-0 group-hover:opacity-20 transition-opacity duration-300 -z-10"></div>
+                  {/* Background Glow - Show on hover or if active */}
+                  <div 
+                    className={`
+                      absolute inset-0 bg-gradient-to-r from-purple-600 to-blue-600 rounded-lg 
+                      transition-opacity duration-300 -z-10
+                      ${isActive ? "opacity-20" : "opacity-0"}
+                      group-hover:opacity-20
+                    `}
+                  ></div>
 
                   {/* Active Indicator */}
                   {isActive && (
@@ -75,7 +88,15 @@ const Navbar = () => {
                   )}
                 </Link>
 
-                <div className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-purple-500 to-cyan-500 group-hover:w-full transition-all duration-500 ease-out"></div>
+                {/* Bottom Border - Show on hover or if active */}
+                <div 
+                  className={`
+                    absolute bottom-0 left-0 h-0.5 bg-gradient-to-r from-purple-500 to-cyan-500 
+                    transition-all duration-500 ease-out
+                    ${isActive ? "w-full" : "w-0"}
+                    group-hover:w-full
+                  `}
+                ></div>
               </li>
             );
           })}

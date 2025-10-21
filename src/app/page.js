@@ -1,6 +1,8 @@
+import About from "@/Component/About/About";
+import Header from "@/Component/Header/Header";
 const Home = () => {
-  return <div>
-    <h1 className="text-3xl text-amber-900">hi</h1>
+  return <div className="mt-10">
+    <Header/><About/>
   </div>;
 };
 

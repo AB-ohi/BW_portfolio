@@ -1,22 +1,59 @@
-.nav_logo{
-    width: 80px;
-    height: 80px;
+.nav_logo {
+  width: 80px;
+  height: 80px;
 }
 
-.nav_bar{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 85%;
-    margin: auto;
+.nav_bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 85%;
+  margin: auto;
 }
 
-.nav_list{
-    display: flex;
-    gap: 30px;
+.nav_list {
+  display: flex;
+  gap: 35px;
+  list-style: none;
 }
 
+.nav_list li {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  overflow: hidden;
+  font-size: 18px;
+  font-weight: 500;
+  color: #00ccff;
+  
+}
 
-.nav_list li{
-    cursor: pointer;
+.nav_text {
+  position: relative;
+  z-index: 2;
+  transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+.nav_icon {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%) translateY(100%);
+  opacity: 0;
+  font-size: 22px;
+  color: #0070f3;
+  transition: all 0.6s ease;
+}
+
+/* Hover effect */
+.nav_list li:hover .nav_text {
+  transform: translateY(-100%);
+  opacity: 0;
+}
+
+.nav_list li:hover .nav_icon {
+  transform: translateX(-50%) translateY(0);
+  opacity: 1;
+  box-shadow: rgba(9, 9, 147, 0.25) 0px 30px 60px -12px inset, rgba(0, 178, 209, 0.3) 0px 18px 36px -18px inset;
 }

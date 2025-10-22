@@ -67,7 +67,7 @@ const About = () => {
               <div className="w-96 h-96 rounded-3xl overflow-hidden border-4 border-purple-500/50 shadow-2xl shadow-purple-500/30">
                 <img 
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" 
-                  src="https://images.unsplash.com/photo-1571171637578-41bc2dd41cd2?w=800&q=80" 
+                  src="https://i.ibb.co/pJLKq5X/back-Ground-2.png" 
                   alt="Developer" 
                 />
               </div>

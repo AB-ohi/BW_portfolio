@@ -143,16 +143,14 @@ const Project = () => {
                 <div className="relative z-10 h-full flex flex-col">
                   
                   {/* Project Header */}
-                  <div className="mb-6">
+                  <div>
                     <div className="flex items-center gap-2 mb-2">
                       <Code2 className="w-5 h-5 text-purple-400" />
                       <span className="text-purple-400 text-sm font-semibold uppercase tracking-wider">
                         Project {String(index + 1).padStart(2, '0')}
                       </span>
                     </div>
-                    <h3 className="text-2xl font-bold text-white group-hover:text-purple-300 transition-colors duration-300">
-                      {project.title}
-                    </h3>
+                   
                   </div>
 
                   {/* Default View - Description */}
@@ -160,6 +158,9 @@ const Project = () => {
                     transition-all duration-500 ease-out
                     ${hoveredProject === project.id ? 'opacity-0 translate-x-[-100%]' : 'opacity-100 translate-x-0'}
                   `}>
+                     <h3 className="text-2xl font-bold text-white group-hover:text-purple-300 transition-colors duration-300 mb-5">
+                      {project.title}
+                    </h3>
                     <p className="text-gray-400 text-base leading-relaxed mb-6">
                       {project.description}
                     </p>

@@ -1,6 +1,7 @@
 "use client";
 import React, { useState, useEffect } from "react";
 import { Home, User, Wrench, Briefcase, Menu, X } from "lucide-react";
+import { Link } from "react-scroll";
 
 const Navbar = () => {
   const [activeItem, setActiveItem] = useState("Home");
@@ -57,8 +58,13 @@ const Navbar = () => {
                 const isActive = activeItem === item.name;
 
                 return (
-                  <li key={index} className="relative group cursor-pointer">
-                    <button
+                  <li  key={index} className="relative group cursor-pointer">
+                    <Link to={item.to}
+                  smooth={true}
+                  duration={700}
+                  offset={-80}
+                  onSetActive={() => setActiveItem(item.name)}
+                  spy={true}
                       onClick={() => handleNavClick(item.name)}
                       className="relative h-12 w-28 flex items-center justify-center overflow-hidden"
                     >
@@ -88,7 +94,7 @@ const Navbar = () => {
                       {isActive && (
                         <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-2 h-2 bg-cyan-400 rounded-full animate-pulse shadow-lg shadow-cyan-400/50"></div>
                       )}
-                    </button>
+                    </Link>
 
                     <div 
                       className={`absolute bottom-0 left-0 h-0.5 bg-gradient-to-r from-purple-500 to-cyan-500 

@@ -26,7 +26,7 @@ const Header = () => {
             </div>
 
             {/* Social Icons - Slide up from bottom on hover */}
-            <div className="absolute -bottom-6 left-1/2 transform -translate-x-1/2 translate-y-full opacity-20 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500 ease-out">
+            <div className="absolute -bottom-6 left-1/2 transform -translate-x-1/2 translate-y-full md:opacity-20 opacity-100 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500 ease-out">
               <div className="bg-slate-800/90 backdrop-blur-sm rounded-full px-6 py-3 flex gap-4 shadow-2xl border border-purple-500/50">
                 <a 
                   href="https://www.facebook.com/ab.ohi.14" 
@@ -61,7 +61,7 @@ const Header = () => {
         </div>
 
         {/* Right Side - Text Content */}
-        <div className="text-white space-y-6">
+        <div className="text-white space-y-6 mt-10 md:mt-0">
           <div className="space-y-2">
             <p className="text-purple-400 text-lg font-medium">Hello, I'm</p>
             <h1 className="text-6xl font-bold bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">

@@ -26,7 +26,7 @@ const Header = () => {
             </div>
 
             {/* Social Icons - Slide up from bottom on hover */}
-            <div className="absolute -bottom-6 left-1/2 transform -translate-x-1/2 translate-y-full opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500 ease-out">
+            <div className="absolute -bottom-6 left-1/2 transform -translate-x-1/2 translate-y-full opacity-20 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500 ease-out">
               <div className="bg-slate-800/90 backdrop-blur-sm rounded-full px-6 py-3 flex gap-4 shadow-2xl border border-purple-500/50">
                 <a 
                   href="https://www.facebook.com/ab.ohi.14" 
@@ -82,14 +82,6 @@ const Header = () => {
             frameworks and best practices. Let's collaborate and bring your vision to life!
           </p>
 
-          <div className="flex gap-4 pt-4">
-            <button className="bg-purple-600 hover:bg-purple-700 text-white px-8 py-3 rounded-full font-semibold transition-all duration-300 hover:scale-105 shadow-lg shadow-purple-500/50">
-              Download CV
-            </button>
-            <button className="border-2 border-purple-500 hover:bg-purple-500/10 text-white px-8 py-3 rounded-full font-semibold transition-all duration-300 hover:scale-105">
-              Contact Me
-            </button>
-          </div>
         </div>
 
       </div>

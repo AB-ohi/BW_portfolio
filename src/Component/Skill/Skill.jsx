@@ -1,5 +1,16 @@
 "use client";
 import React, { useState, useEffect, useRef } from "react";
+import HTML_icon from '../../../public/logo_img/html.png'
+import css_icon from '../../../public/logo_img/css.png'
+import JavaScript_icon from '../../../public/logo_img/js.png'
+import React_icon from '../../../public/logo_img/react.png'
+import Express_icon from '../../../public/logo_img/Express.png'
+import Node_icon from '../../../public/logo_img/node.png'
+import mongoDB_icon from '../../../public/logo_img/mongoDB.png'
+import Firebase_icon from '../../../public/logo_img/fireBase.png'
+import Figma_icon from '../../../public/logo_img/figma.png'
+import Next_icon from '../../../public/logo_img/next.png'
+import Image from "next/image";
 
 const Skills = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -11,61 +22,61 @@ const Skills = () => {
       name: "HTML",
       percentage: 90,
       color: "from-orange-500 to-red-500",
-      icon: "🌐",
+      icon: HTML_icon,
     },
     {
       name: "CSS",
       percentage: 80,
       color: "from-blue-500 to-cyan-500",
-      icon: "🎨",
+      icon: css_icon,
     },
     {
       name: "JavaScript",
       percentage: 60,
       color: "from-yellow-500 to-orange-500",
-      icon: "⚡",
+      icon: JavaScript_icon,
     },
     {
       name: "React",
       percentage: 70,
       color: "from-cyan-500 to-blue-500",
-      icon: "⚛️",
+      icon: React_icon,
     },
     {
       name: "Express.js",
       percentage: 70,
       color: "from-gray-500 to-gray-700",
-      icon: "🚀",
+      icon: Express_icon,
     },
     {
       name: "Node.js",
       percentage: 50,
       color: "from-green-500 to-emerald-500",
-      icon: "📗",
+      icon: Node_icon,
     },
     {
       name: "MongoDB",
       percentage: 90,
       color: "from-green-600 to-green-800",
-      icon: "🍃",
+      icon: mongoDB_icon,
     },
     {
       name: "Firebase",
       percentage: 80,
       color: "from-yellow-500 to-orange-600",
-      icon: "🔥",
+      icon: Firebase_icon,
     },
     {
       name: "Figma",
       percentage: 80,
       color: "from-purple-500 to-pink-500",
-      icon: "🎭",
+      icon: Figma_icon,
     },
     {
       name: "Next.js",
       percentage: 80,
       color: "from-black to-gray-700",
-      icon: "▲",
+      icon: Next_icon,
     },
   ];
 
@@ -99,7 +110,7 @@ const Skills = () => {
   return (
     <section
       ref={sectionRef}
-      className="min-h-screen flex items-center justify-center py-20 px-8 overflow-hidden"
+      className="min-h-screen flex items-center justify-center  px-8 overflow-hidden"
     >
       <div className="max-w-7xl w-full">
         {/* Section Header */}
@@ -160,7 +171,7 @@ const Skills = () => {
 
                   {/* Icon */}
                   <span className="relative z-10 filter drop-shadow-lg group-hover:opacity-0 transition-all">
-                    {skill.icon}
+                    <Image src={skill.icon} alt={skill.name} width={60} height={60} />
                   </span>
 
                   {/* Percentage Badge - Show on Hover */}

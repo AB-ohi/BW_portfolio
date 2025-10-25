@@ -156,7 +156,7 @@ const Skills = () => {
                 {/* Icon Circle */}
                 <div
                   className={`
-                  w-32 h-32 rounded-full bg-gradient-to-br ${skill.color} 
+                  w-32 h-32 rounded-full 
                   flex items-center justify-center text-5xl
                   shadow-lg shadow-purple-500/30
                   transition-all duration-500
@@ -167,15 +167,15 @@ const Skills = () => {
                 `}
                 >
                   {/* Background Animation */}
-                  <div className="absolute inset-0 bg-white/0 group-hover:bg-white/10 transition-all duration-500"></div>
+                  <div className={`absolute inset-0 bg-white/0 group-hover:bg-gradient-to-br hover:${skill.color}  transition-all duration-500`}></div>
 
                   {/* Icon */}
                   <span className="relative z-10 filter drop-shadow-lg group-hover:opacity-0 transition-all">
-                    <Image src={skill.icon} alt={skill.name} width={60} height={60} />
+                    <Image src={skill.icon} alt={skill.name}/>
                   </span>
 
                   {/* Percentage Badge - Show on Hover */}
-                  <div className="absolute inset-0 bg-black/90 rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 rotate-[347deg] transition-all  backdrop-blur-sm">
+                  <div className="absolute inset-0  rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 rotate-[347deg] transition-all  backdrop-blur-sm">
                     <span className="text-2xl font-bold text-white">
                       {skill.percentage}%
                     </span>

@@ -176,7 +176,10 @@ const Navbar = () => {
                 }`}
                 style={{ transitionDelay: `${index * 75}ms` }}
               >
-                <button
+                <Link to={item.to}
+                  smooth={true}
+                  duration={700}
+                  offset={-80}
                   onClick={() => handleNavClick(item.name)}
                   className={`w-full group relative overflow-hidden rounded-xl transition-all duration-300 ${
                     isActive 
@@ -214,7 +217,7 @@ const Navbar = () => {
 
                   {/* Hover Effect */}
                   <div className="absolute inset-0 bg-gradient-to-r from-purple-600/0 via-purple-600/10 to-blue-600/0 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-700 ease-out"></div>
-                </button>
+                </Link>
               </li>
             );
           })}

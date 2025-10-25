@@ -158,12 +158,12 @@ const Skills = () => {
                   className={`
                   w-32 h-32 rounded-full 
                   flex items-center justify-center text-5xl
-                  shadow-lg shadow-purple-500/30
+                  
                   transition-all duration-500
                   group-hover:scale-110 group-hover:rotate-12
                   group-hover:shadow-2xl group-hover:shadow-purple-500/50
-                  border-4 border-white/10
-                  relative overflow-hidden
+                  group-hover:border-4 group-hover:border-white/10
+                  relative group-hover:overflow-hidden
                 `}
                 >
                   {/* Background Animation */}

@@ -1,3 +1,4 @@
+import Footer from "@/Component/Footer/footer";
 import "./globals.css";
 import Navbar from "@/Component/Navbar/navbar";
 export const metadata = {
@@ -11,6 +12,7 @@ export default function RootLayout({ children }) {
       <body className="bg-gradient-to-br  from-slate-900 via-purple-900 to-slate-900">
         <Navbar/>
         {children}
+        <Footer/>
       </body>
     </html>
   );

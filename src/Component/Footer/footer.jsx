@@ -60,7 +60,7 @@ const Footer = () => {
                 className="w-16 h-16 object-contain"
               />
               <h3 className="text-2xl font-bold bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
-                Your Name
+                Abu Sime Khan Ohi
               </h3>
             </div>
             <p className="text-gray-400 text-sm leading-relaxed">

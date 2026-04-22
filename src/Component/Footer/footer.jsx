@@ -18,7 +18,7 @@ const Footer = () => {
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
- const [isTerms, setIsTerms] = useState(true)
+ const [isTerms, setIsTerms] = useState(false)
   const quickLinks = [
     { name: "Home", to: "home" },
     { name: "About Me", to: "about" },

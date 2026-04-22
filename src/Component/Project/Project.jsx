@@ -11,17 +11,17 @@ const Project = () => {
   const projects = [
     {
       id: 1,
-      title: "CV maker",
+      title: "Multi-vendor Shopping Site",
       description:
-        "An interactive CV maker web application that allows users to create, customize, and download professional resumes instantly. Features include live preview, multiple template options, real-time form validation, and PDF export functionality.",
-      technologies: ["React", "vanilla css", "java"],
-      githubLink: "https://github.com/AB-ohi/CV_maker",
-      liveLink: "https://subtle-alpaca-25ffd3.netlify.app",
+        "This is a multivendor eCommerce website where I can sell my own clothing products and also manage my physical shop. At the same time, other users can join the platform and create their own shops through the Dokan section. Basically, it's a shared marketplace system where multiple sellers can grow together.",
+      technologies: ["React", "vanilla css", "java-scrip"],
+      githubLink: "",
+      liveLink: "",
       components: [
-        "https://i.ibb.co.com/C5S7jJxB/screencapture-subtle-alpaca-25ffd3-netlify-app-one-2025-10-26-13-37-34.png",
-        "https://i.ibb.co.com/v6TSgpqH/screencapture-subtle-alpaca-25ffd3-netlify-app-2025-10-26-13-37-13.png",
-        "https://i.ibb.co.com/b5RbP01Q/screencapture-subtle-alpaca-25ffd3-netlify-app-four-2025-10-26-13-39-10.png",
-        "https://i.ibb.co.com/tw3hvh0H/screencapture-subtle-alpaca-25ffd3-netlify-app-three-2025-10-26-13-38-41.png",
+        "https://i.ibb.co.com/RGXs3jnn/screencapture-localhost-5173-2026-04-22-15-47-00.png",
+        "https://i.ibb.co.com/DgPZ7BZY/screencapture-localhost-5173-shop-women-2026-04-22-15-48-26.png",
+        "https://i.ibb.co.com/xKJf48xS/screencapture-localhost-5173-shop-2026-04-22-15-47-50.png",
+        "https://i.ibb.co.com/mC3m978y/screencapture-localhost-5173-detail-68413152428864def49352a6-2026-04-22-15-49-10.png",
       ],
       gradient: "from-blue-500 to-purple-600",
     },
@@ -85,7 +85,7 @@ const Project = () => {
       ([entry]) => {
         setIsVisible(entry.isIntersecting);
       },
-      { threshold: 0.2 }
+      { threshold: 0.2 },
     );
 
     if (sectionRef.current) {
@@ -233,24 +233,35 @@ const Project = () => {
 
                   {/* Links - Always Visible at Bottom */}
                   <div className="mt-auto pt-6 flex gap-4">
-                    <a
-                      href={project.githubLink}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex items-center gap-2 px-5 py-2.5 bg-gray-800 hover:bg-gray-700 text-white rounded-full font-medium transition-all duration-300 hover:scale-105 border border-gray-700"
-                    >
-                      <Github className="w-4 h-4" />
-                      GitHub
-                    </a>
-                    <a
-                      href={project.liveLink}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className={`flex items-center gap-2 px-5 py-2.5 bg-gradient-to-r ${project.gradient} text-white rounded-full font-medium transition-all duration-300 hover:scale-105 shadow-lg`}
-                    >
-                      <ExternalLink className="w-4 h-4" />
-                      Live Demo
-                    </a>
+                    {project.liveLink || project.githubLink ? (
+                      <>
+                        <a
+                          href={project.githubLink}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="flex items-center gap-2 px-5 py-2.5 bg-gray-800 hover:bg-gray-700 text-white rounded-full font-medium transition-all duration-300 hover:scale-105 border border-gray-700"
+                        >
+                          <Github className="w-4 h-4" />
+                          GitHub
+                        </a>
+                        <a
+                          href={project.liveLink}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className={`flex items-center gap-2 px-5 py-2.5 bg-gradient-to-r ${project.gradient} text-white rounded-full font-medium transition-all duration-300 hover:scale-105 shadow-lg`}
+                        >
+                          <ExternalLink className="w-4 h-4" />
+                          Live Demo
+                        </a>
+                      </>
+                    ) : (
+                      <>
+                        <p className="bg-[#c4a06a1a] text-[#c4a06a] px-4 py-2 rounded-md text-sm border-l-4 border-[#c4a06a]">
+                          🚧 This project is under development. Live demo coming
+                          soon.
+                        </p>
+                      </>
+                    )}
                   </div>
                 </div>
 

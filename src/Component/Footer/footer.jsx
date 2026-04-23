@@ -11,14 +11,14 @@ import {
   ArrowUp,
 } from "lucide-react";
 import { RxCross2 } from "react-icons/rx";
-import { AnimatePresence,motion } from "framer-motion";
-
+import { AnimatePresence, motion } from "framer-motion";
 
 const Footer = () => {
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
- const [isTerms, setIsTerms] = useState(false)
+  const [isTerms, setIsTerms] = useState(false);
+  const [isPrivacyPolicy, setIsPrivacyPolicy] = useState(false);
   const quickLinks = [
     { name: "Home", to: "home" },
     { name: "About Me", to: "about" },
@@ -49,8 +49,8 @@ const Footer = () => {
 
   return (
     <footer className="relative bg-gradient-to-br from-slate-950 via-purple-950 to-slate-950 text-white border-t border-purple-500/30 mt-5">
-       <AnimatePresence>
-        {isTerms && (
+      <AnimatePresence>
+        {isTerms ? (
           <>
             <motion.div
               initial={{ opacity: 0 }}
@@ -95,7 +95,48 @@ const Footer = () => {
               </div>
             </motion.div>
           </>
-        )}
+        ) : isPrivacyPolicy ? (
+          <>
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              className="fixed inset-0 bg-black/40 z-40"
+              onClick={() => setIsPrivacyPolicy(false)}
+            />
+            <motion.div
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={{ opacity: 1, scale: 1 }}
+              exit={{ opacity: 0, scale: 0.9 }}
+              className="fixed z-50 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-11/12 md:w-1/2 bg-gradient-to-br from-purple-900 to-slate-900 p-8 rounded-lg shadow-2xl border border-purple-500/30"
+            >
+              <button
+                onClick={() => setIsPrivacyPolicy(false)}
+                className="absolute top-4 right-4 font-bold text-xl cursor-pointer border-purple-400 border-2 rounded-md p-1 hover:bg-purple-700 transition-colors"
+              >
+                <RxCross2 />
+              </button>
+
+              <h2 className="text-2xl font-bold mb-4 text-purple-300">
+                Privacy Policy
+              </h2>
+
+              <div className="space-y-4 text-gray-300 text-sm">
+                <p>
+                  This portfolio website does not collect any personal data from
+                  visitors. Any information shared through contact forms (such
+                  as name or email) is used only for communication purposes and
+                  is not stored or shared with third parties.
+                </p>
+
+                <p>
+                  This site may use basic analytics tools to understand visitor
+                  interactions and improve user experience.
+                </p>
+              </div>
+            </motion.div>
+          </>
+        ) : null}
       </AnimatePresence>
       <div></div>
       {/* Scroll to Top Button */}
@@ -255,19 +296,20 @@ const Footer = () => {
           </p>
 
           <div className="flex gap-6">
-            <a
-              href=''
-              className="hover:text-purple-400 transition-colors duration-300"
+            <p
+              href=""
+              className="hover:text-purple-400 transition-colors duration-300 cursor-pointer"
+              onClick={() => setIsPrivacyPolicy((v) => !v)}
             >
               Privacy Policy
-            </a>
-            <a
+            </p>
+            <p
               href=""
-              className="hover:text-purple-400 transition-colors duration-300"
-              onClick={()=>setIsTerms((v)=> !v)}
+              className="hover:text-purple-400 transition-colors duration-300 cursor-pointer"
+              onClick={() => setIsTerms((v) => !v)}
             >
               Terms of Service
-            </a>
+            </p>
           </div>
         </div>
       </div>

@@ -1,5 +1,6 @@
 import React from 'react'
 import { Facebook, Github, Linkedin, Mail } from 'lucide-react'
+import profileImage from '../../../public/profile_img/profilePicture.png'
 
 const Header = () => {
   return (
@@ -14,7 +15,7 @@ const Header = () => {
               <div className="w-80 h-80 rounded-2xl overflow-hidden border-4 border-purple-500 shadow-2xl shadow-purple-500/50">
                 <img 
                   className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" 
-                  src="https://i.ibb.co/6B91vTv/mying.png" 
+                  src="/profile_img/profilePicture.png"
                   alt="Profile" 
                 />
               </div>

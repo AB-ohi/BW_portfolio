@@ -134,8 +134,8 @@ const About = () => {
 
           {/* Buttons */}
           <div className="flex gap-4 pt-4">
-            <a href='https://drive.google.com/uc?export=download&id=1Xv_5mf3wria8CaIfmvDKO30hQ4LscQVO'
-            Download
+            <a href='/resume/ohi_web_developer.pdf'
+            download
               onClick={handleDownloadResume}
               className="group relative flex items-center gap-2 bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white px-8 py-3 rounded-full font-semibold transition-all duration-300 hover:scale-105 shadow-lg shadow-purple-500/50 hover:shadow-xl hover:shadow-purple-500/70"
             >
@@ -143,7 +143,7 @@ const About = () => {
               Download Resume
             </a>
             
-            <Link target='_blank' href='https://drive.google.com/file/d/1Xv_5mf3wria8CaIfmvDKO30hQ4LscQVO/view?usp=drive_link'
+            <Link target='_blank' href='/resume/ohi_web_developer.pdf'
               onClick={handleViewResume}
               className="group flex items-center gap-2 border-2 border-purple-500 hover:bg-purple-500/10 text-purple-300 hover:text-white px-8 py-3 rounded-full font-semibold transition-all duration-300 hover:scale-105 hover:border-purple-400"
             >

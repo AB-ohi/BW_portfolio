@@ -110,7 +110,7 @@ const Skills = () => {
   return (
     <section
       ref={sectionRef}
-      className="min-h-screen flex items-center justify-center  px-8 overflow-hidden"
+      className="min-h-screen flex items-center justify-center  px-4 overflow-hidden"
     >
       <div className="max-w-7xl w-full">
         {/* Section Header */}

@@ -15,8 +15,8 @@ const Project = () => {
       description:
         "This is a multivendor eCommerce website where I can sell my own clothing products and also manage my physical shop. At the same time, other users can join the platform and create their own shops through the Dokan section. Basically, it's a shared marketplace system where multiple sellers can grow together.",
       technologies: ["React", "vanilla css", "java-scrip"],
-      githubLink: "",
-      liveLink: "",
+      githubLink: "https://github.com/AB-ohi/krist-shop",
+      liveLink: "https://shuta.netlify.app/",
       components: [
         "https://i.ibb.co.com/RGXs3jnn/screencapture-localhost-5173-2026-04-22-15-47-00.png",
         "https://i.ibb.co.com/DgPZ7BZY/screencapture-localhost-5173-shop-women-2026-04-22-15-48-26.png",

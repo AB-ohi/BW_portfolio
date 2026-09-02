@@ -13,6 +13,7 @@ const Navbar = () => {
     { name: "About Me", icon: User, to: "about" },
     { name: "My Skill", icon: Wrench, to: "skill" },
     { name: "My Project", icon: Briefcase, to: "project" },
+    { name: "Certificate", icon: Briefcase, to: "certificate" },
   ];
 
   useEffect(() => {

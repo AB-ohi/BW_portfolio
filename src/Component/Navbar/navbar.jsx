@@ -1,6 +1,6 @@
 "use client";
 import React, { useState, useEffect } from "react";
-import { Home, User, Wrench, Briefcase, Menu, X } from "lucide-react";
+import { Home, User, Wrench, Briefcase, ShieldCheck, X } from "lucide-react";
 import { Link } from "react-scroll";
 
 const Navbar = () => {
@@ -12,8 +12,8 @@ const Navbar = () => {
     { name: "Home", icon: Home, to: "home" },
     { name: "About Me", icon: User, to: "about" },
     { name: "My Skill", icon: Wrench, to: "skill" },
+    { name: "Certificate", icon: ShieldCheck, to: "certificate" },
     { name: "My Project", icon: Briefcase, to: "project" },
-    { name: "Certificate", icon: Briefcase, to: "certificate" },
   ];
 
   useEffect(() => {

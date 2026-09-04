@@ -1,5 +1,7 @@
 'use client'
+import Image from 'next/image'
 import React, { useState } from 'react'
+import certificate from "../../../public/certificate/certificate.jpg"
 
 const Certificate = () => {
   const [selectedCert, setSelectedCert] = useState(null)
@@ -10,6 +12,7 @@ const Certificate = () => {
       issuer: "Programming Hero",
       date: "2024",
       pdf: "/certificate/certificate.pdf",
+      image:certificate
     },
   ]
 
@@ -32,8 +35,8 @@ const Certificate = () => {
           >
             {/* PDF preview */}
             <div className="relative w-full h-64 overflow-hidden bg-gray-100 pointer-events-none">
-              <iframe
-                src={`${cert.pdf}#toolbar=0&navpanes=0&scrollbar=0`}
+              <Image
+                src={cert.image}
                 className="w-full h-full scale-105 group-hover:scale-110 transition-transform duration-500"
                 title={cert.title}
               />
@@ -46,7 +49,7 @@ const Certificate = () => {
 
             <div className="p-4 text-center bg-[linear-gradient(90deg,rgba(214,161,247,1)_0%,rgba(204,95,237,1)_35%,rgba(138,12,176,1)_100%)]">
               <h3 className="font-semibold text-lg">{cert.title}</h3>
-              <p className="text-sm text-white">{cert.issuer} &middot; {cert.date}</p>
+              <p className="text-sm text-white">{cert.issuer}  {cert.date}</p>
             </div>
           </div>
         ))}

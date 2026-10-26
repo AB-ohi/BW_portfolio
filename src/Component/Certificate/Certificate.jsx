@@ -2,6 +2,7 @@
 import Image from 'next/image'
 import React, { useState } from 'react'
 import certificate from "../../../public/certificate/certificate.jpg"
+import py from "../../../public/certificate/py.jpg"
 
 const Certificate = () => {
   const [selectedCert, setSelectedCert] = useState(null)
@@ -13,6 +14,13 @@ const Certificate = () => {
       date: "2024",
       pdf: "/certificate/certificate.pdf",
       image:certificate
+    },
+    {
+      title: "Python for Beginners",
+      issuer: "simplilearn",
+      date: "2026",
+      pdf: "/certificate/py.pdf",
+      image:py
     },
   ]
 

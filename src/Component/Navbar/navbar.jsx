@@ -1,6 +1,6 @@
 "use client";
 import React, { useState, useEffect } from "react";
-import { Home, User, Wrench, Briefcase, ShieldCheck, X } from "lucide-react";
+import { Home, User, Wrench, ShieldCheck, Briefcase, Building2  } from "lucide-react";
 import { Link } from "react-scroll";
 
 const Navbar = () => {
@@ -8,14 +8,14 @@ const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
-  const navItems = [
-    { name: "Home", icon: Home, to: "home" },
-    { name: "About Me", icon: User, to: "about" },
-    { name: "My Skill", icon: Wrench, to: "skill" },
-    { name: "Certificate", icon: ShieldCheck, to: "certificate" },
-    { name: "My Project", icon: Briefcase, to: "project" },
-  ];
-
+const navItems = [
+  { name: "Home", icon: Home, to: "home" },
+  { name: "About Me", icon: User, to: "about" },
+  { name: "Experience", icon: Building2, to: "experience" },
+  { name: "My Skill", icon: Wrench, to: "skill" },
+  { name: "Certificate", icon: ShieldCheck, to: "certificate" },
+  { name: "My Project", icon: Briefcase, to: "project" },
+];
   useEffect(() => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 20);

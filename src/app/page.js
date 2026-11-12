@@ -1,5 +1,6 @@
 import About from "@/Component/About/About";
 import Certificate from "@/Component/Certificate/Certificate";
+import Experience from "@/Component/Experience/Experience";
 import Header from "@/Component/Header/Header";
 import Project from "@/Component/Project/Project";
 import Skills from "@/Component/Skill/Skill";
@@ -9,6 +10,7 @@ const Home = () => {
     <div className="mt-24">
       <section id="home"><Header /></section>
       <section id="about" className="mt-32"><About /></section>
+      <section id="Experience" className="mt-32"><Experience/></section>
       <section id="skill" className="mt-20"><Skills /></section>
       <section id="certificate" className="mt-32"><Certificate/></section>
       <section id="project" className="mt-32"><Project/></section>
